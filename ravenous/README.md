@@ -1,3 +1,17 @@
+## Summary of the First Section of this Project:
+
+Congratulations! You completed the first part of the Ravenous project. Let’s briefly review what you built:
+
+A Business component that simulates a single business
+A BusinessList component that simulates a list of single businesses
+A SearchBar component that will be used in the future to search for business
+The App component renders a SearchBar component and a BusinessList component. The final product is a simulation of how the Ravenous project will look and work. Some functionality (like querying the Yelp API) is currently missing, but you’ll build it in the upcoming projects.
+
+## Reflection:
+
+At the moment, some information (like business information) is hard coded into specific components. How might you pass this information dynamically between components?
+We’ll expand each component through the coming weeks to address the question above (and more).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
