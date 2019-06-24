@@ -2,9 +2,12 @@ import React from 'react';
 import './SearchBar.css';
 
 /*
-  The search bar will communicate with the Yelp API, but you’ll build the
-  functionality to communicate with the API in a later project. Today, you’ll
-  build part of the structure that’s needed to communicate with the Yelp API.
+  FUTURE:
+  The search bar will communicate with the Yelp API, but we’ll build the
+  functionality to communicate with the API in a later project.
+
+  NOW:
+  Build part of the structure that’s needed to communicate with the Yelp API.
   Specifically, requests to the Yelp API must follow formatting and naming
   conventions set by the API. For example, the search bar should allow users to
   search businesses by:
@@ -12,9 +15,14 @@ import './SearchBar.css';
   Best Match
   Highest Rated
   Most Reviewed
+
+  To achieve this we will create an object (sortByOptions) with keys and values that conform to
+  what the API expects to receive. Object values below are found in the Yelp API documentation.
 */
 
 // Parameter: sort-by, Type: String, Value: (Modes used in Yelp Search Algorithm)
+
+// Keys and Values required for List Item Elements
 const sortByOptions = {
   'Best Match' : 'best_match',
   'Highest Rated' : 'rating',
@@ -27,12 +35,15 @@ class SearchBar extends React.Component {
     display the sort options (Best Match, Highest Rated, Most Reviewed). This
     is to help future proof against potential changes to the Yelp API.
 
-    Need to iterate through the object by accessing the keys in sortByOptions.
+    - renderSortByOptions should iterate through the keys and values of the
+    sortByOptions object and return a list item.
+    - The list item elements should use the keys as an attribute, and the values
+    as content.
   */
   renderSortByOptions() {
-    // Call the keys() method on the JavaScript Object library and pass in sortByOptions.
-    // Iterate through with map().
-    // Pass a callback function to the map() method as an argument. The callback function should have one parameter called sortByOption.
+    // Call keys() method on the JS Object library and pass in sortByOptions.
+    // Now we have access to the keys, Iterate through with map().
+    // Pass a callback function to the map() method as an argument.
     return Object.keys(sortByOptions).map(sortByOption => {
       let sortByOptionValue = sortByOptions[sortByOption];  // Access the sortByOptions values using the sortByOption parameter of the callback function.
       <li key={sortByOptionValue}>{sortByOption}</li>
@@ -62,3 +73,5 @@ class SearchBar extends React.Component {
   }
 
 }
+
+export default SearchBar;
