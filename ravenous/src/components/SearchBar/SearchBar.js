@@ -57,7 +57,7 @@ class SearchBar extends React.Component {
         <ul>
           {
             //Use .renderSortByOptions() to sort the businesses by their options
-            .renderSortByOptions();
+            this.renderSortByOptions();
           }
         </ul>
       </div>
