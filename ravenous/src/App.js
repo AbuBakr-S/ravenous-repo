@@ -4,7 +4,7 @@ import './App.css';
 import BusinessList from '../components/BusinessList/BusinessList.js';
 import SearchBar from '../components/SearchBar/SearchBar.';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="App">
